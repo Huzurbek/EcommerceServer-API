@@ -1,25 +1,23 @@
 const sequelize = require("../db");
 const { DataTypes } = require("sequelize");
 
-const Brand = sequelize.define(
-  "Brand",
+const Color = sequelize.define(
+  "Color",
   {
-    brand_id: {
+    color_id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
       primaryKey: true,
     },
-    brand_name: {
+    color_name: {
       type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-    },
-    brand_description: {
-      type: DataTypes.STRING(500),
       allowNull: false,
     },
   },
-  { tableName: "brands" }
+  {
+    tableName: "colors",
+    timestamps: false,
+  }
 );
 
-module.exports = Brand;
+module.exports = Color;
