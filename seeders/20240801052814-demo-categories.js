@@ -88,7 +88,7 @@ module.exports = {
     }, {});
 
     const sizecategories = await queryInterface.sequelize.query(
-      `SELECT category_id, category_name FROM size_categories WHERE category_name IN ('Men Clothing', 'Women Clothing','Baby Clothing','Men Shoes','Women Shoes','Baby Shoes');`,
+      `SELECT category_id, category_name FROM size_categories;`,
       {
         type: Sequelize.QueryTypes.SELECT,
       }
